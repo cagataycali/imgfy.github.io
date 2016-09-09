@@ -12,7 +12,7 @@ PLEASE PREPARE YOUR GET PARAM LIKE THIS:
     "backgroundImage": "url('http://res.cloudinary.com/cagatayc/image/upload/v1473390354/template.png')",
     "backgroundColor": "#cccccc",
     "backgroundRepeat": "no-repeat",
-    "height": "1116px"
+    "height": "1116px",
   },
   "images": [
     {
