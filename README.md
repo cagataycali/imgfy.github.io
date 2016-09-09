@@ -9,15 +9,15 @@ PLEASE PREPARE YOUR GET PARAM LIKE THIS:
 ```
 {
   "template": {
-    "backgroundImage": "url('http://res.cloudinary.com/cagatayc/image/upload/v1473390354/template.png')",
+    "backgroundImage": "url(%27http:\/\/res.cloudinary.com\/cagatayc\/image\/upload\/v1473390354\/template.png%27)",
     "backgroundColor": "#cccccc",
     "backgroundRepeat": "no-repeat",
-    "height": "1116px",
+    "height": "1116px"
   },
   "images": [
     {
-      "id":1,
-      "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
+      "id": 1,
+      "src": "http:\/\/res.cloudinary.com\/cagatayc\/image\/upload\/v1473390360\/racoon.png",
       "property": {
         "position": "absolute",
         "top": "332px",
@@ -26,8 +26,8 @@ PLEASE PREPARE YOUR GET PARAM LIKE THIS:
       }
     },
     {
-      "id":2,
-      "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
+      "id": 2,
+      "src": "http:\/\/res.cloudinary.com\/cagatayc\/image\/upload\/v1473390360\/racoon.png",
       "property": {
         "position": "absolute",
         "top": "633px",
@@ -36,8 +36,8 @@ PLEASE PREPARE YOUR GET PARAM LIKE THIS:
       }
     },
     {
-      "id":3,
-      "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
+      "id": 3,
+      "src": "http:\/\/res.cloudinary.com\/cagatayc\/image\/upload\/v1473390360\/racoon.png",
       "property": {
         "position": "absolute",
         "top": "813px",

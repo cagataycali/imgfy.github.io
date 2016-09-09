@@ -8,53 +8,14 @@
   </head>
   <body>
     <script type="text/javascript">
-    try {
-      decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1];
-      var content = JSON.parse(decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1]);
-    } catch (e) {
-      window.location.href = "http://cagataycali.xyz/";
-    }
+      try {
+        decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1];
+        var content = JSON.parse(decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1]);
+      } catch (e) {
+        window.location.href = "http://cagataycali.xyz/";
+      }
 
-      // var content = {
-      //   "template": {
-      //     "backgroundImage": "url('http://res.cloudinary.com/cagatayc/image/upload/v1473390354/template.png')",
-      //     "backgroundColor": "#cccccc",
-      //     "backgroundRepeat": "no-repeat",
-      //     "height": "1116px"
-      //   },
-      //   "images": [
-      //     {
-      //       "id":1,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "332px",
-      //         "left": "430px",
-      //         "maxHeight": "169px"
-      //       }
-      //     },
-      //     {
-      //       "id":2,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "633px",
-      //         "left": "217px",
-      //         "maxHeight": "180px"
-      //       }
-      //     },
-      //     {
-      //       "id":3,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "813px",
-      //         "left": "-4px",
-      //         "maxHeight": "180px"
-      //       }
-      //     }
-      //   ]
-      // }
+      // var content={ "template": { "backgroundImage": "url(%27http://res.cloudinary.com/cagatayc/image/upload/v1473390354/template.png%27)", "backgroundColor": "#cccccc", "backgroundRepeat": "no-repeat", "height": "1116px" }, "images": [ { "id":1, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "332px", "left": "430px", "maxHeight": "169px" } }, { "id":2, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "633px", "left": "217px", "maxHeight": "180px" } }, { "id":3, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "813px", "left": "-4px", "maxHeight": "180px" } } ] }
 
       function createImg(image) {
         $('body').append(`<img src="${image.src}" id="${image.id}">`);
