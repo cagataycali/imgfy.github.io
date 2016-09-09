@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+        background-image: url("template.png");
+        background-color: #cccccc;
+        background-repeat: no-repeat;
+        height: 1116px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var demoUrl = 'http://b9568403.ngrok.io?images=[ { "src": "https://assets-cdn-image.movielala.com//hbqfevs2i/image/upload/e_trim/w_320/w_260,h_260,c_lpad/dpr_1.0/production/stickers/files/2668.png", "position": "absolute", "top": "332px", "left": "430px", "max_height": "169px" }, { "src": "https://assets-cdn-image.movielala.com//hbqfevs2i/image/upload/e_trim/w_320/w_260,h_260,c_lpad/dpr_1.0/production/stickers/files/2668.png", "position": "absolute", "top": "633px", "left": "217px", "max_height": "180px" }, { "src": "https://assets-cdn-image.movielala.com//hbqfevs2i/image/upload/e_trim/w_320/w_260,h_260,c_lpad/dpr_1.0/production/stickers/files/2668.png", "position": "absolute", "top": "813px", "left": "-4px", "max_height": "180px" } ]';
+      var urlUzn = demoUrl;
+      console.log(urlUzn.length);
+      var images = JSON.parse(decodeURIComponent(window.location.href).match(/images=([^&]+)/)[1]);
+      // alert(images)
+      // var images = [
+      //   {
+      //     "src": "racoon.png",
+      //     "position": "absolute",
+      //     "top": "332px",
+      //     "left": "430px",
+      //     "max_height": "169px"
+      //   },
+      //   {
+      //     "src": "racoon.png",
+      //     "position": "absolute",
+      //     "top": "633px",
+      //     "left": "217px",
+      //     "max_height": "180px"
+      //   },
+      //   {
+      //     "src": "racoon.png",
+      //     "position": "absolute",
+      //     "top": "813px",
+      //     "left": "-4px",
+      //     "max_height": "180px"
+      //   }
+      // ];
+      function createImg(image) {
+        $('body').append(`
+          <img
+            src="${image.src}"
+            style="
+            position:${image.position};
+            top:${image.top};
+            left:${image.left};
+            max-height:${image.max_height};
+          ">
+          `);
+      }
+      images.forEach(function (image) {
+        createImg(image);
+      })
+    </script>
+  </body>
+</html>
