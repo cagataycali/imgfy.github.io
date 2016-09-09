@@ -3,7 +3,7 @@
     "backgroundImage": "url(http://res.cloudinary.com/cagatayc/image/upload/v1473459823/template2.png)",
     "backgroundColor": "#cccccc",
     "backgroundRepeat": "no-repeat",
-    "height": "1116px"
+    "height": "100px"
   },
   "images": [
     {
@@ -101,7 +101,7 @@
       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
       "property": {
         "position": "absolute",
-        "top": "343px",
+        "top": "348px",
         "left": "282px",
         "maxHeight": "87px"
       }
@@ -111,10 +111,10 @@
       "src": "http://res.cloudinary.com/cagatayc/image/upload/l_text:arial_15_center:Cagatay%20Cali,g_north,y_20/bottom.png",
       "property": {
         "position": "absolute",
-        "top": "651px",
+        "top": "659px",
         "left": "2px",
         "maxHeight": "84px",
-        "maxWidth": "389px"
+        "maxWidth": "390px"
       }
     },
     {
