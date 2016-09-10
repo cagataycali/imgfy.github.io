@@ -5,11 +5,9 @@
     <title>imgify.xyz</title>
     <meta name="author" content="Çağatay Çalı">
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-    <script src="blockUI.js"></script>
   </head>
   <body id="body">
     <script type="text/javascript">
-      $.blockUI();
       var content;
       try {
         decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1];
@@ -17,20 +15,15 @@
       } catch (e) {
         alert('Check your content json.')
       } finally {
-
       }
-
       function createImg(image) {
         $('body').append(`<img src="${image.src}" id="${image.id}">`);
         $(`#${image.id}`).css(image.property)
       }
       $('body').css( content.template );
-
       content.images.forEach(function (image) {
         createImg(image);
       })
-
-      $.unblockUI();
     </script>
   </body>
 </html>

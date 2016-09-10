@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>imgify.xyz</title>
+    <meta name="author" content="Çağatay Çalı">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="domvas.js"></script>
+    <script src="FileSaver.min.js"></script>
+  </head>
+  <body>
+    <div id="body" style="margin-left: -6px;margin-top: -8px;">
+
+    </div>
+    <div id="dom">
+
+    </div>
+    <script type="text/javascript">
+      var content;
+      try {
+        decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1];
+        content = JSON.parse(decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1]);
+      } catch (e) {
+        alert('Check your content json.')
+      } finally {
+
+      }
+
+      $('#body').css( content.template );
+      $('#body').append(`<img src="http://res.cloudinary.com/cagatayc/image/upload/profile.jpg" id="background">`);
+      // $(`#background`).css(content.template)
+
+      function createImg(image) {
+        $('#body').append(`<img src="${image.src}" id="${image.id}">`);
+        $(`#${image.id}`).css(image.property)
+      }
+
+      content.images.forEach(function (image) {
+        createImg(image);
+      })
+
+      setTimeout(function () {
+        var node = document.getElementById('body');
+        domtoimage.toPng(node)
+            .then(function (dataUrl) {
+                var img = new Image();
+                img.src = dataUrl;
+                document.body.appendChild(img);
+                // window.saveAs(img, 'image.png');
+            })
+            .catch(function (error) {
+                console.error('oops, something went wrong!', error);
+            });
+      }, 4000);
+
+    </script>
+  </body>
+</html>
