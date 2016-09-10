@@ -29,15 +29,15 @@
         createImg(image);
       })
 
-      var node = document.getElementById('body');
-
-      domtoimage.toJpeg(node, { quality: 0.95 })
-        .then(function (dataUrl) {
-            var link = document.createElement('a');
-            link.download = 'my-image-name.jpeg';
-            link.href = dataUrl;
-            link.click();
-        });
+      // var node = document.getElementById('body');
+      //
+      // domtoimage.toJpeg(node, { quality: 0.95 })
+      //   .then(function (dataUrl) {
+      //       var link = document.createElement('a');
+      //       link.download = 'my-image-name.jpeg';
+      //       link.href = dataUrl;
+      //       link.click();
+      //   });
     </script>
   </body>
 </html>
