@@ -8,153 +8,15 @@
   </head>
   <body>
     <script type="text/javascript">
-    var content;
+      var content;
       try {
         decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1];
         content = JSON.parse(decodeURIComponent(window.location.href).match(/content=([^&]+)/)[1]);
       } catch (e) {
-        // window.location.href = "http://cagataycali.xyz/";
-        alert('Please check your json')
-        // if (decodeURIComponent(window.location.href).match(/template=([^&]+)/)[1] === 1) {
-        //   content = { "template": { "backgroundImage": "url(http://res.cloudinary.com/cagatayc/image/upload/v1473459823/template2.png)", "backgroundColor": "#cccccc", "backgroundRepeat": "no-repeat", "height": "100px" }, "images": [ { "id": 1, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "491px", "left": "12px", "maxHeight": "74px" } }, { "id": 2, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "491px", "left": "102px", "maxHeight": "74px" } }, { "id": 3, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "491px", "left": "192px", "maxHeight": "74px" } }, { "id": 4, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "491px", "left": "282px", "maxHeight": "74px" } }, { "id": 5, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "573px", "left": "12px", "maxHeight": "74px" } }, { "id": 6, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "573px", "left": "102px", "maxHeight": "74px" } }, { "id": 7, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "573px", "left": "192px", "maxHeight": "74px" } }, { "id": 8, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "573px", "left": "282px", "maxHeight": "74px" } }, { "id": 9, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "230px", "left": "12px", "maxHeight": "87px" } }, { "id": 10, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png", "property": { "position": "absolute", "top": "348px", "left": "282px", "maxHeight": "87px" } }, { "id": 11, "src": "http://res.cloudinary.com/cagatayc/image/upload/l_text:arial_15_center:Cagatay%20Cali,g_north,y_20/bottom.png", "property": { "position": "absolute", "top": "659px", "left": "2px", "maxHeight": "84px", "maxWidth": "390px" } }, { "id": 12, "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473461152/dana_pcq03u.jpg", "property": { "position": "absolute", "top": "14px", "left": "166px", "maxHeight": "66px" } } ] }
-        //
-        // }
-      }
-      // Bottom : http://res.cloudinary.com/cagatayc/image/upload/l_text:arial_15_center:Sa%20text,g_north,y_20/bottom.png
-      // var content = {
-      //   "template": {
-      //     "backgroundImage": "url(http://res.cloudinary.com/cagatayc/image/upload/v1473459823/template2.png)",
-      //     "backgroundColor": "#cccccc",
-      //     "backgroundRepeat": "no-repeat",
-      //     "height": "1116px"
-      //   },
-      //   "images": [
-      //     {
-      //       "id": 1,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "491px",
-      //         "left": "12px",
-      //         "maxHeight": "74px"
-      //       }
-      //     },
-      //     {
-      //       "id": 2,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "491px",
-      //         "left": "102px",
-      //         "maxHeight": "74px"
-      //       }
-      //     },
-      //     {
-      //       "id": 3,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "491px",
-      //         "left": "192px",
-      //         "maxHeight": "74px"
-      //       }
-      //     },
-      //     {
-      //       "id": 4,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "491px",
-      //         "left": "282px",
-      //         "maxHeight": "74px"
-      //       }
-      //     },
-      //
-      //     //
-      //     {
-      //       "id": 5,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "573px",
-      //         "left": "12px",
-      //         "maxHeight": "74px"
-      //       }
-      //     },
-      //     {
-      //       "id": 6,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "573px",
-      //         "left": "102px",
-      //         "maxHeight": "74px"
-      //       }
-      //     },
-      //     {
-      //       "id": 7,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "573px",
-      //         "left": "192px",
-      //         "maxHeight": "74px"
-      //       }
-      //     },
-      //     {
-      //       "id": 8,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "573px",
-      //         "left": "282px",
-      //         "maxHeight": "74px"
-      //       }
-      //     },
-      //     {
-      //       "id": 9,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "230px",
-      //         "left": "12px",
-      //         "maxHeight": "87px"
-      //       }
-      //     },
-      //     {
-      //       "id": 10,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473390360/racoon.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "343px",
-      //         "left": "282px",
-      //         "maxHeight": "87px"
-      //       }
-      //     },
-      //     {
-      //       "id": 11,
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/l_text:arial_15_center:Cagatay%20Cali,g_north,y_20/bottom.png",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "651px",
-      //         "left": "2px",
-      //         "maxHeight": "84px",
-      //         "maxWidth": "389px"
-      //       }
-      //     },
-      //     {
-      //       "id": 12, // dana
-      //       "src": "http://res.cloudinary.com/cagatayc/image/upload/v1473461152/dana_pcq03u.jpg",
-      //       "property": {
-      //         "position": "absolute",
-      //         "top": "14px",
-      //         "left": "166px",
-      //         "maxHeight": "66px"
-      //       }
-      //     }
-      //   ]
-      // }
+        alert('Check your content json.')
+      } finally {
 
+      }
 
       function createImg(image) {
         $('body').append(`<img src="${image.src}" id="${image.id}">`);
