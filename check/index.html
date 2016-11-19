@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bu fotoğrafı ne zaman çektim?</title>
+    <meta name="author" content="Çağatay Çalı">
+    <link rel="publisher" href="Çağatay Çalı">
+    <meta name="twitter:title" content="Bu fotoğrafı ne zaman çektim?">
+    <meta name="twitter:site" content="@cagataycali">
+    <meta name="twitter:url" content="https://cagataycali.xyz">
+    <meta name="description" content="Fotoğrafın ne zaman çekildiğini öğren!">
+    <meta name="keywords" content="Çağatay, çalı, çağatay çalı, security, web security, coding, nodejs türkiye,nodejs türkçe,nodejs tr, nodejs dersler,çağatay node,pamukkale üniversitesi,nodejs hacker">
+    <meta property="og:description" content="Fotoğrafın ne zaman çekildiğini öğren!">
+    <meta property="og:site_name" content="Bu fotoğrafı ne zaman çektim?">
+    <script type="text/javascript" src="exif.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
+    <script type="text/javascript" src="tr.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" >
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="file-upload">
+        <input id="file-input" type="file" />
+        <i class="fa fa-arrow-up"></i>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      moment.locale('tr');
+      document.getElementById("file-input").onchange = function(e) {
+          EXIF.getData(e.target.files[0], function() {
+              var make = EXIF.getTag(this, "Make");
+              var model = EXIF.getTag(this, "Model");
+              var cihaz = "";
+              if (make && model) {
+                cihaz = `${make} ${model},`
+              }
+              var DateTime = EXIF.getTag(this, "DateTime");
+              if (!DateTime) {
+                alert("Malesef tarih bulunamadı :(")
+              } else {
+                var gun = moment(DateTime, "YYYY:MM:DD HH:mm").fromNow() === "Invalid date" ? DateTime : moment(DateTime, "YYYY:MM:DD HH:mm").fromNow()
+                alert(`${cihaz} ${gun}`)
+              }
+          });
+      }
+    </script>
+
+  </body>
+</html>
